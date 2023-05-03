@@ -83,8 +83,8 @@ export const OpenAIStream = async (
   const system = { role: 'system', content: prompt };
 
   let openaiApiUrl = '';
-  if(process.env.API_PROXY && process.env.API_PROXY !== ''){
-    openaiApiUrl = process.env.API_PROXY;
+  if(process.env.API_PROXY_URL && process.env.API_PROXY_URL !== ''){
+    openaiApiUrl = process.env.API_PROXY_URL;
   }else{
     openaiApiUrl = 'https://api.openai.com/v1/chat/completions';
   }
